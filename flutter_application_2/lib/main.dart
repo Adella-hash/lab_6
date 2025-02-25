@@ -5,7 +5,7 @@ import 'package:flutter_application_2/third_screen.dart';
 import 'first_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {

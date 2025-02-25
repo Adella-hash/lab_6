@@ -1,16 +1,30 @@
-
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatefulWidget {
-  const ThirdScreen({super.key});
-
-  @override
-  State<ThirdScreen> createState() => _ThirdScreenState();
-}
-
-class _ThirdScreenState extends State<ThirdScreen> {
+class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text('Third Screen')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Pop to Previous'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.popAndPushNamed(context, '/third');
+              },
+              child: Text('PopAndPushNamed to Third'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
+
